@@ -1,0 +1,35 @@
+/* ----top banner ----  */
+.top-banner {
+    background: black;
+    height: 530px;
+
+    padding: 20px 50px 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.banner-text {
+
+    width: 480px;
+    padding: 0 0 45px 0;
+
+}
+
+.banner-text p {
+
+    color: white;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 220;
+    margin-bottom: 40px;
+}
+
+.banner-text h1 {
+    color: white;
+    font-weight: 650;
+    font-size: 62px;
+    margin: 0 0 10px 0;
+    line-height: 65px;
+}

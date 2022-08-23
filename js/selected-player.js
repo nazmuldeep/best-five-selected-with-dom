@@ -11,3 +11,20 @@ playerName('naymer-name', 'naymer-select-btn');
 playerName('ramos-name', 'ramos-select-btn');
 playerName('silva-name', 'silva-select-btn');
 playerName('vitinha-name', 'vitinha-select-btn');
+
+// calculate the expense for per player
+document.getElementById('calculate').addEventListener('click', function () {
+
+    const perPlayerExpenseInputField = document.getElementById('per-player');
+
+    console.log(perPlayerExpenseInputField.value);
+
+    // validation of per player expense input field
+    if (perPlayerExpenseInputField.value == '' || perPlayerExpenseInputField.value < 0) {
+        alert('Invalid Amount/Type');
+        perPlayerExpenseInputField.value = '';
+        return;
+    }
+
+
+})

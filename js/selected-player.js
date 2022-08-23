@@ -1,7 +1,7 @@
 const playerArray = [];
 
-function display(addPlayerName) {
-    console.log(addPlayerName)
+function displayPlayer(addPlayerName) {
+    // console.log(addPlayerName)
 
     const tableBody = document.getElementById("player-name");
     tableBody.innerHTML = "";
@@ -16,32 +16,47 @@ function display(addPlayerName) {
         <td> ${name}</td>
         `;
         tableBody.appendChild(tr);
+
+
+    }
+    if (playerArray.length <= 5) {
+
+        return;
+    }
+    else {
+        alert('maximun 5 player select accept');
+        return;
     }
 }
 
 
+// addToList (element){
+//     element.disabled = true ;
+//     } 
 
 function selectPlayerButton(player) {
 
     // console.log(player.parentNode.parentNode.children[0].innerText)
     const playerName = player.parentNode.parentNode.children[0].innerText;
+    playerArray.push(playerName);
 
-
-    const playerObj = {
-        playerName: playerName
-    }
-    playerArray.push(playerObj);
 
     // console.log(playerArray.length)
     document.getElementById('total-player-selected').innerText = playerArray.length;
-    // if ((playerArray.length) <= 5) {
-    //     return true;
-    // }
-    // else {
-    //     alert("You can select maximum 5 player")
-    //     return;
-    // }
-    display(playerArray);
+
+    if (playerArray.length <= 5) {
+        player.disabled = true;
+
+        return;
+    }
+    else {
+        alert("You can select maximum 5 player")
+        return;
+    }
+
+
+
+    displayPlayer(playerArray);
 
 
 }

@@ -35,7 +35,7 @@ document.getElementById('calculate').addEventListener('click', function () {
     let order = parseInt(orderderList.length);
 
 
-    const playerExpenseShown = document.getElementById('player-expenses');
+    const playerExpenseShown = document.getElementById('palyer-expenses');
     const perPlayerExpense = parseFloat(perPlayerExpenseInputField.value);
     const playerExpense = perPlayerExpense * (order - 5);
 
@@ -49,7 +49,7 @@ document.getElementById('calculate').addEventListener('click', function () {
 
 document.getElementById('calculate-total').addEventListener('click', function () {
 
-    const playerExpenses = document.getElementById('player-expenses');
+    const playerExpenses = document.getElementById('palyer-expenses');
     const managerExpenses = document.getElementById('manager');
     const coachExpenses = document.getElementById('coach');
 
@@ -57,4 +57,15 @@ document.getElementById('calculate-total').addEventListener('click', function ()
 
 
 
+    // validation for manager,coach input field and calculate the total expense
+    if (playerExpenses.innerText == '' || managerExpenses.value == '' || managerExpenses.value < 0 || coachExpenses.value == '' || coachExpenses.value < 0) {
+        alert('invalid Amount/Type');
+        managerExpenses.value = '';
+        coachExpenses.value = '';
+        return;
+    }
+
+    const total = parseFloat(playerExpenses.innerText) + parseFloat(managerExpenses.value) + parseFloat(coachExpenses.value);
+
+    totalCost.innerText = parseFloat(total);
 })

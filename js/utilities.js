@@ -19,8 +19,8 @@ function playerName(playerNameId, playerButton) {
         disableButton.disabled = true;
 
 
-        disableButton.style.background = 'white';
-        disableButton.style.color = 'red';
+        disableButton.style.background = 'red';
+        disableButton.style.color = 'white';
 
 
         // Look after number of listed elements
@@ -32,7 +32,7 @@ function playerName(playerNameId, playerButton) {
         // by default 5 listed previously that's why  length considered 10 
 
         if (order > 10) {
-            alert('can not add more');
+            alert('Maximum select 5 playes');
             disableButton.disabled = false;
             disableButton.style.background = 'blue';
             disableButton.style.color = 'white';

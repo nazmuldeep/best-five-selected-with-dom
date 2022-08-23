@@ -1,3 +1,4 @@
+// uses in utilities files function to passs player name and player button
 
 playerName('achraf-hakimi-name', 'achraf-hakimi-select-btn');
 playerName('gianluigi-name', 'gianluigi-select-btn');
